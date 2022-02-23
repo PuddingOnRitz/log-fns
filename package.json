@@ -1,7 +1,7 @@
 {
   "name": "log-fns",
   "version": "1.0.0",
-  "description": "Simple JavaScript Logging Functions",
+  "description": "Simple JavaScript Logging Utility",
   "main": "index.js",
   "scripts": {
     "test": "jest && eslint . --ext .json,.js"
