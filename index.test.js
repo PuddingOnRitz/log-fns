@@ -117,6 +117,7 @@ describe('Index unit tests', () => {
 
   test('Setting the Log Level', () => {
     const logger = createLogger({ logLevel: 'DEBUG' });
+
     const debugMessage = logger.debug('Debugging...');
     expect(debugMessage).not.toBe('');
     const traceMessage = logger.trace('Tracing...');

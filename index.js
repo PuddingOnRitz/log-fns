@@ -44,7 +44,7 @@ const createLogFunction = ({ config, logLevel: aLogLevel }) => {
   const logLevelWeight = logWeightsByLevel[aLogLevel];
   return logLevelWeight < baseLogLevelWeight
     ? config.noOp
-    : createOperativeLogFunction({ config, logLevel });
+    : createOperativeLogFunction({ config, logLevel: aLogLevel });
 };
 
 const createLogger = (config = {}) => {
