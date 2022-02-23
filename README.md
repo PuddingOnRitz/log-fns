@@ -1,3 +1,3 @@
 # log-fns
 
-## [Wiki](https://github.com/PuddingOnRitz/log-fns/wiki)
+## [Wiki](https://github.com/puddingontheritz/log-fns/wiki)

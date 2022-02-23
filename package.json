@@ -1,6 +1,6 @@
 {
   "name": "log-fns",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple JavaScript Logging",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "Functional",
     "FP"
   ],
-  "author": "PuddingOnRitz",
+  "author": "PuddingOnTheRitz",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.9.0",
@@ -40,10 +40,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PuddingOnRitz/log-fns.git"
+    "url": "git+https://github.com/puddingontheritz/log-fns.git"
   },
   "bugs": {
-    "url": "https://github.com/PuddingOnRitz/log-fns/issues"
+    "url": "https://github.com/puddingontheritz/log-fns/issues"
   },
-  "homepage": "https://github.com/PuddingOnRitz/log-fns#readme"
+  "homepage": "https://github.com/puddingontheritz/log-fns#readme"
 }
