@@ -6,6 +6,12 @@
   "scripts": {
     "test": "jest && eslint . --ext .json,.js"
   },
+  "files": [
+    "src/index.js",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "JavaScript",
     "JS",
