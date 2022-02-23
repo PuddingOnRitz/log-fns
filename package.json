@@ -16,7 +16,7 @@
     "Functional",
     "FP"
   ],
-  "author": "Pudding on the Ritz",
+  "author": "PuddingOnRitz",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.9.0",
@@ -30,5 +30,14 @@
     "install": "^0.13.0",
     "jest": "27.4.3",
     "ramda": "^0.28.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PuddingOnRitz/log-fns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PuddingOnRitz/log-fns/issues"
+  },
+  "homepage": "https://github.com/PuddingOnRitz/log-fns#readme"
 }
