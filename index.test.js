@@ -133,4 +133,12 @@ describe('Index unit tests', () => {
     logger.info(() => `Today: ${getDate()}`);
     expect(getDate).toHaveBeenCalledTimes(1);
   });
+
+  test('Complex object', () => {
+    const logger = createLogger();
+    const msg = logger.info({ greeting: 'Hello', name: 'Joan' });
+    const { message: { greeting, name } } = JSON.parse(msg);
+    expect(greeting).toBe('Hello');
+    expect(name).toBe('Joan');
+  });
 });
