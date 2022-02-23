@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "es6": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:json/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "fp",
+        "sort-keys-fix"
+    ],
+    "rules": {
+        "fp/no-arguments": "off",
+        "fp/no-class": "error",
+        "fp/no-delete": "error",
+        "fp/no-events": "error",
+        "fp/no-get-set": "error",
+        "fp/no-let": "error",
+        "fp/no-loops": "error",
+        "fp/no-mutating-assign": "error",
+        "fp/no-mutating-methods": "error",
+        "fp/no-mutation": [
+            "error",
+            {
+                "commonjs": true
+            }
+        ],
+        "fp/no-nil": "off",
+        "fp/no-proxy": "error",
+        "fp/no-rest-parameters": "off",
+        "fp/no-this": "error",
+        "fp/no-throw": "warn",
+        "fp/no-unused-expression": "off",
+        "fp/no-valueof-field": "error",
+        "max-len": "off",
+        "no-var": "error",
+        "sort-keys-fix/sort-keys-fix": "warn"
+    }
+}
