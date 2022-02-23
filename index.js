@@ -27,7 +27,11 @@ const getDefaultConfig = () => {
 
 const createOperativeLogFunction = ({ config, logLevel }) => {
   const { enrichMessage, formatOutput, writeOutput } = config;
-  return (message) => {
+  const isFunction = (message) => message !== null && message !== undefined && typeof message === 'function';
+  return (messageArg) => {
+    const message = isFunction(messageArg)
+      ? messageArg()
+      : messageArg;
     const enrichedMessage = enrichMessage({ logLevel, message });
     const formattedOutput = formatOutput(enrichedMessage);
     return writeOutput({ logLevel, message: formattedOutput });

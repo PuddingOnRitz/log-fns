@@ -125,4 +125,12 @@ describe('Index unit tests', () => {
     const warnMessage = logger.warn('Warning...');
     expect(warnMessage).not.toBe('');
   });
+
+  test('Deferred execution', () => {
+    const logger = createLogger();
+    const getDate = jest.fn(() => new Date());
+    logger.debug(() => `Today: ${getDate()}`);
+    logger.info(() => `Today: ${getDate()}`);
+    expect(getDate).toHaveBeenCalledTimes(1);
+  });
 });
