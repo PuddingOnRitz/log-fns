@@ -114,4 +114,14 @@ describe('Index unit tests', () => {
     const logMessage = logger.info('Info!');
     expect(logMessage).toBe('NoOp!');
   });
+
+  test('Setting the Log Level', () => {
+    const logger = createLogger({ logLevel: 'DEBUG' });
+    const debugMessage = logger.debug('Debugging...');
+    expect(debugMessage).not.toBe('');
+    const traceMessage = logger.trace('Tracing...');
+    expect(traceMessage).toBe('');
+    const warnMessage = logger.warn('Warning...');
+    expect(warnMessage).not.toBe('');
+  });
 });

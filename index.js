@@ -1,9 +1,9 @@
 const getDefaultConfig = () => {
   const logLevels = Object.freeze(['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL']);
   const enrichMessage = ({ message, logLevel }) => ({
+    timestamp: new Date().toISOString(),
     logLevel,
     message,
-    timestamp: new Date().toISOString(),
   });
   const getLogFunctionName = (logLevel) => logLevel.toLowerCase();
   const logLevel = 'INFO';

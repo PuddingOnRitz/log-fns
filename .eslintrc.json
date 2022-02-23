@@ -43,6 +43,6 @@
         "fp/no-valueof-field": "error",
         "max-len": "off",
         "no-var": "error",
-        "sort-keys-fix/sort-keys-fix": "warn"
+        "sort-keys-fix/sort-keys-fix": "off"
     }
 }
