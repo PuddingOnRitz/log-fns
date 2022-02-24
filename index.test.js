@@ -166,4 +166,32 @@ describe('Index unit tests', () => {
     logger.logRegular('Regular logging...');
     logger.logError('Error logging...');
   });
+
+  test('Customizing the log format', () => {
+    const formatOutput = ({ timestamp, logLevel, message }) => `${timestamp}|${logLevel}|${(typeof message === 'string') ? message : JSON.stringify(message)}`;
+    const logger = createLogger({ formatOutput });
+    logger.info({ msg: 'Info message...' });
+  });
+
+  test('Customizing the Output ', () => {
+    const writeOutput = ({ logLevel, message }) => {
+      (logLevel === 'ERROR' ? console.error : console.log)(message);
+      return message;
+    };
+    const logger = createLogger({ writeOutput });
+    logger.info('Info message...');
+    logger.error('Error message...');
+  });
+
+  test('Customizing the message enrichment', () => {
+    const enrichMessage = ({ message, logLevel }) => ({
+      unixTime: new Date().getTime(),
+      appName: 'my-app',
+      loggerName: 'my-logger',
+      logLevel,
+      message,
+    });
+    const logger = createLogger({ enrichMessage });
+    logger.info('Info message...');
+  });
 });
