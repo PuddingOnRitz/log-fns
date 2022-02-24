@@ -141,4 +141,29 @@ describe('Index unit tests', () => {
     expect(greeting).toBe('Hello');
     expect(name).toBe('Joan');
   });
+
+  test('Custom log levels', () => {
+    const logger = createLogger({
+      logLevel: 'NORMAL',
+      logLevels: ['NORMAL', 'WARNING', 'ERROR'],
+    });
+    logger.normal('Normal log entry...');
+    logger.warning('Warning log entry...');
+    logger.error('Error log entry...');
+  });
+
+  test('Customize log function names', () => {
+    const logger = createLogger({
+      logLevel: 'REGULAR LOGGING',
+      logLevels: ['VERBOSE LOGGING', 'REGULAR LOGGING', 'ERROR LOGGING'],
+      getLogFunctionName: (logLevel) => ({
+        'VERBOSE LOGGING': 'logVerbose',
+        'REGULAR LOGGING': 'logRegular',
+        'ERROR LOGGING': 'logError',
+      })[logLevel],
+    });
+    logger.logVerbose('Verbose logging...');
+    logger.logRegular('Regular logging...');
+    logger.logError('Error logging...');
+  });
 });
